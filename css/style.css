@@ -1,0 +1,31 @@
+/**/
+
+
+.sell-rate {
+	color: red;
+}
+
+.buy-rate {
+	color: green;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+
+.hidden {
+	display: none;
+}
+
+.middle {
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

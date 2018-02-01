@@ -1,0 +1,41 @@
+<ons-page id="ratesPage" ons-scope ng-controller="homeCtrl">
+    <!-- toolbar -->
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="toggle()">
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">
+            Coin Exchange Rates
+        </div>
+    </ons-toolbar>
+    <!-- /toolbar -->
+    
+
+    
+    <ons-tabbar var="tabbar" swipeable position="top" tab-border modifier="autogrow top-border" ignoreEdgeWidth ons-prechange="getContent($event)">
+
+        <ons-tab page="app/views/btc.html" id="btc" label="BTC" active>
+            <i class="cc BTC"></i>
+        </ons-tab>
+        <ons-tab page="app/views/btc.html" id="eth" label="ETH">
+            <i class="cc ETH"></i>
+        </ons-tab>
+        <ons-tab page="app/views/btc.html" id="ltc" label="LTC">
+            <i class="cc LTC"></i>
+        </ons-tab>
+        <ons-tab page="app/views/btc.html" label="BCH">
+            <i class="cc BCH"></i>
+        </ons-tab>
+        <ons-tab page="app/views/btc.html" label="XRP">
+            <i class="cc XRP"></i>
+        </ons-tab>
+        <ons-tab page="app/views/btc.html" label="DASH">
+            <i class="cc DASH"></i>
+        </ons-tab>
+
+    </ons-tabbar>
+    
+
+</ons-page>

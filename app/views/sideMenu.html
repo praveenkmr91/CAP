@@ -1,0 +1,40 @@
+<ons-page ng-controller="splitterCtrl">
+
+	<div class="profile-pic">
+      <img src="https://monaca.io/img/logos/download_image_onsenui_01.png">
+    </div>
+	
+	<!-- <ons-list-title>Menu</ons-list-title> -->
+    <ons-list>
+        <ons-list-item ng-click="load('home.html')" tappable>
+
+            <!-- <div class="left">
+            	          <ons-icon fixed-width class="list-item__icon" icon="ion-home"></ons-icon>
+            	        </div> -->
+
+	        <div class="center">
+	          Coin Exchange Rates
+	        </div>
+
+        </ons-list-item>
+
+        <ons-list-item ng-click="load('settings.html')" tappable>
+            <!-- <div class="left">
+            	          <ons-icon fixed-width class="list-item__icon" icon="ion-home"></ons-icon>
+            	        </div> -->
+
+	        <div class="center">
+	          Settings
+	        </div>
+        </ons-list-item>
+        <ons-list-item ng-click="load('about.html')" tappable>
+            <!-- <div class="left">
+            	          <ons-icon fixed-width class="list-item__icon" icon="ion-home"></ons-icon>
+            	        </div> -->
+
+	        <div class="center">
+	          Exit
+	        </div>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

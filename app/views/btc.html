@@ -1,0 +1,77 @@
+<ons-page id="btcPage">
+    <!-- main content -->
+    <ons-pull-hook ng-action="load($done)" var="loader">
+        <span ng-switch="loader.state">
+      <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull down to refresh</span>
+        <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release to refresh</span>
+        <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon> Loading data...</span>
+        </span>
+    </ons-pull-hook>
+    <ons-card class="best-rate">
+        <div class="title">
+            ARBITRAGE OPPORTUNITY (INR)
+        </div>
+        <div class="content">
+            <ons-row>
+                <ons-col class="buy-rate-col">
+                    <ons-row>
+                        Buy:
+                        <b class="buy-rate">11,456.00</b>
+                    </ons-row>
+                    <ons-row>
+                        from:
+                        <b id="buy-exchange-name">Coinome</b>
+                    </ons-row>
+                </ons-col>
+                <ons-col class="text-center middle">
+                    <ons-icon icon="fa-arrow-right"></ons-icon>
+                </ons-col>
+                <ons-col class="sell-rate-col">
+                    <div>
+                        <span>Sell: </span>
+                        <b class="sell-rate">11,456.00</b>
+                    </div>
+                    <div>
+                        <span>To: </span>
+                        <b id="sell-exchange-name">ZebPay</b>
+                    </div>
+                </ons-col>
+            </ons-row>
+        </div>
+    </ons-card>
+
+    <ons-list modifier="inset" ng-repeat="(exchange, data) in exchangesData">
+        <ons-list-item modifier="longdivider">
+            <div class="left">
+                <img class="list-item__thumbnail" src="img/logos/{{exchange}}.png">
+            </div>
+            
+            <div class="center">
+          <div class="header">
+            <span class="list-item__title"><b>{{exchange}} </b></span>
+            <span class="list-item__subtitle">({{data.currency}})</span>
+          </div>
+
+          <p class="list-item__content"></p>
+
+          <ons-row>
+            <ons-col class="text-left">
+                <span>Buy: </span>
+                <b class="buy-rate">{{data.buy | currency:"&#8377;"}}</b>
+            </ons-col>
+
+            <ons-col>
+              <span>Sell: </span>
+                <b class="sell-rate">{{data.sell | currency:"&#8377;"}}</b>
+            </ons-col>
+            
+            
+          </ons-row>
+          <!-- <ons-row>{{data.volume}}</ons-row> -->
+        </div>
+
+        </ons-list-item>
+
+
+        <!-- /main content -->
+</ons-page>
